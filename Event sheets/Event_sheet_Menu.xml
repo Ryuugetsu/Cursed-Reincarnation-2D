@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event_sheet_Menu</name>
+    <events>
+        <event-block sid="601277858377414">
+            <conditions>
+                <condition id="3" name="On touched object" sid="426443871617950" type="Touch">
+                    <param id="0" name="Object">btn_play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="589202262480119" type="Audio">
+                    <param id="0" name="Audio file">switch38</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="880917227905980" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="457347420920899" type="System">
+                    <param id="0" name="Layout">Mapa</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

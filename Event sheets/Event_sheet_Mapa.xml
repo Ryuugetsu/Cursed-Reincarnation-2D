@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event_sheet_Mapa</name>
+    <events>
+        <variable constant="0" name="var_fase" sid="480755342744806" static="0" type="number">1</variable>
+        <event-block sid="831474399516893">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="760934546537640" type="btn_start_fase">
+                    <param id="0" name="Instance variable">fase</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">var_fase</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="418130840358635" type="btn_start_fase">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="728269454837740">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="884898226732851" type="btn_start_fase">
+                    <param id="0" name="Instance variable">fase</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">var_fase</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="456322473463226" type="btn_start_fase">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="606736464960220">
+            <conditions>
+                <condition id="3" name="On touched object" sid="932390845976447" type="Touch">
+                    <param id="0" name="Object">btn_start_fase</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="185474159895813" type="btn_start_fase">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="292418946846994" type="Audio">
+                    <param id="0" name="Audio file">switch38</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="635944277270840" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="714079858907576">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="763740249193485" type="System">
+                            <param id="0" name="Variable">var_fase</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="734003310511359" type="System">
+                            <param id="0" name="Layout">&quot;level_&quot;&amp;btn_start_fase.fase</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="980090026369642">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="166621234058166" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="328948883895752" type="System">
+                            <param id="0" name="Layout">&quot;level_&quot;&amp;(btn_start_fase.fase*3)-2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="963505611773918">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="789909118697704" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="753895932645824" type="Audio" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
